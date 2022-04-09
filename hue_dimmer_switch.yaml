@@ -66,34 +66,34 @@ action:
       subtype: "{{ trigger.event.data.subtype }}"
   - choose:
       - conditions:
-          - "{{ type == short_release }}"
+          - "{{ type == 'short_release' }}"
           - "{{ subtype == 1 }}"
         sequence: !input on_press
       - conditions:
-          - "{{ type == repeat }}"
+          - "{{ type == 'repeat' }}"
           - "{{ subtype == 1 }}"
         sequence: !input on_hold
       - conditions:
-          - "{{ type == short_release }}"
+          - "{{ type == 'short_release' }}"
           - "{{ subtype == 2 }}"
         sequence: !input up_press
       - conditions:
-          - "{{ type == repeat }}"
+          - "{{ type == 'repeat' }}"
           - "{{ subtype == 2 }}"
         sequence: !input up_hold
       - conditions:
           - "{{ subtype == 3 }}"
-          - "{{ type == short_release }}"
+          - "{{ type == 'short_release' }}"
         sequence: !input down_press
       - conditions:
           - "{{ subtype == 3 }}"
-          - "{{ type == repeat }}"
+          - "{{ type == 'repeat' }}"
         sequence: !input down_hold
       - conditions:
           - "{{ subtype == 4 }}"
-          - "{{ type == short_release }}"
+          - "{{ type == 'short_release' }}"
         sequence: !input off_press
       - conditions:
           - "{{ subtype == 4 }}"
-          - "{{ type == repeat }}"
+          - "{{ type == 'repeat' }}"
         sequence: !input off_hold
