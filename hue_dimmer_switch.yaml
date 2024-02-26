@@ -10,6 +10,10 @@ blueprint:
           integration: hue
           manufacturer: Signify Netherlands B.V.
           model: "Hue dimmer switch (RWL021)"
+        device:
+          integration: hue
+          manufacturer: Signify Netherlands B.V.
+          model: "Hue dimmer switch (RWL021)"
     on_press:
       name: Button 1 (ON) press actions
       default: []
