@@ -7,9 +7,13 @@ blueprint:
       name: Dimmer Switch
       selector:
         device:
-          integration: hue
-          manufacturer: Signify Netherlands B.V.
-          model: "Hue dimmer switch (RWL021)"
+          filter:
+            - integration: hue
+              manufacturer: Signify Netherlands B.V.
+              model: "Hue dimmer switch (RWL021)"
+            - integration: hue
+              manufacturer: Signify Netherlands B.V.
+              model: "Hue dimmer switch (RWL022)"
     on_press:
       name: Button 1 (ON) press actions
       default: []
